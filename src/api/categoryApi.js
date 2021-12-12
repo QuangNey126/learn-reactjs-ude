@@ -2,27 +2,27 @@ import axiosClient from './axiosClient';
 
 const categoryApi = {
     getAll(params) {
-        const url = '/categoties';
+        const url = '/categories';
         return axiosClient.get(url, { params })
     },
 
     get(id) {
-        const url = `/categoties/${id}`;
+        const url = `/categories/${id}`;
         return axiosClient.get(url);
     }, 
 
     add(data) {
-        const url = '/categoties';
+        const url = '/categories';
         return axiosClient.post(url, data);
     },
    
     update(data) {
-        const url = `/categoties/${data.id}`;
+        const url = `/categories/${data.id}`;
         return axiosClient.patch(url, data);
     },
 
     remove(id) {
-        const url = `/categoties/${id}`;
+        const url = `/categories/${id}`;
         return axiosClient.delete(url);
     },
 };
